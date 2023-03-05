@@ -124,13 +124,16 @@ internal class MenuSystem
         Console.Clear();
     }
 
+    /// <summary>
+    /// This method takes user input charactarised by a First name and a Last name.
+    /// It then creates an email address using the first name and last name.
+    /// </summary>
     private static void Task2()
     {
         Console.Clear();
         Col.Cyan("");
         Console.WriteLine("Welcome to the email creation system. Please enter your name.");
         Console.WriteLine();
-
 
         // Create an instance of the EmailShort class and call the Email method
         EmailShort emailShort = new EmailShort();
