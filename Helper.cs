@@ -1,13 +1,16 @@
 ﻿public static class Helper
 {
-    //Sets text (cursor) to the center of the console window.
+    /// <summary>
+    /// Sets text (cursor) to the center of the console window.
+    /// </summary>
+
     public static void CenterText(string text)
     {
         int screenWidth = Console.WindowWidth; // Gets the width of the console window
 
-        int stringWidth = text.Length;  // Gets the length of the text to be centered
+        int stringWidth = text.Length; // Gets the length of the text to be centered
 
-        int left = (screenWidth / 2) - (stringWidth / 2); // Calculates the horizontal position for the text to be centered
+        int left = (screenWidth - stringWidth) / 2; // Calculates the horizontal position for the text to be centered
 
         int top = Console.CursorTop; // Gets the current vertical position of the console cursor
 
@@ -17,7 +20,9 @@
         Col.Default("");
     }
 
-    //Gives a blinking effect a dot, showing the computer is 'thinking' and not crashed.
+    /// <summary>
+    /// Gives a blinking effect a dot, showing the computer is 'thinking' and not crashed.
+    /// </summary>
     public static void Blinker(string text)
     {
         for (int i = 1; i <= 3; i++)
