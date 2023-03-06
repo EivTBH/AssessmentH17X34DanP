@@ -21,18 +21,28 @@ internal class MenuSystem
 {
     private static void Main()
     {
+        //Hack.Run();
+
+        //Pi.Run();
         while (true)
         {
             Helper.CenterText($"Hello and welcome to my 'H17X34' assessment");
-
             Col.White("");
-            Console.WriteLine("Please select a Task:");
+            string input2 = "Please select a Task:";
+            for (int i = 0; i < input2.Length; i++)
+            {
+                Console.Write(input2[i]);
+                System.Threading.Thread.Sleep(50); // delay between characters
+            }
+            Thread.Sleep(200);
+
+            Console.WriteLine("");
             Col.Red("");
             Console.WriteLine("1. Task 1 & 2: File size information.");
             Col.Cyan("");
             Console.WriteLine("2. Task 3: Create email address.");
             Col.Green("");
-            Console.WriteLine("3. Task 4");
+            Console.WriteLine("3. Task 4: Enter and Sort Speed from fastest to slowest in (ms).");
             Col.Yellow("");
             Console.WriteLine("4. Exit");
             Col.Default("");
@@ -55,9 +65,15 @@ internal class MenuSystem
                     Task3();
                     break;
 
+                
+
                 case "4":
                     // Exit the program
                     return;
+
+                case "Easter":
+                    Secret();
+                    break;
 
                 default:
                     Console.Clear();
@@ -121,6 +137,28 @@ internal class MenuSystem
         Col.Green("");
         Console.WriteLine("Press any key to return to menu.");
         Console.ReadKey();
+        ConsoleKeyInfo keyInfo = Console.ReadKey();
+
+        Console.Clear();
+        Console.WriteLine($"you pressed the {keyInfo.Key} key!");
+        string input3 = "$I said the 'ANY' key. Its next to the thingy on the wotsit.";
+        for (int i = 0; i < input3.Length; i++)
+        {
+            Console.Write(input3[i]);
+            Thread.Sleep(100); // delay between characters
+        }
+        Console.WriteLine();
+        Console.ReadKey();
+        Console.Clear();
+        Console.WriteLine($"you pressed the {keyInfo.Key} key this time!");
+        string input4 = "Oh fine, don't listen to me! Press whatever you want!";
+        for (int i = 0; i < input4.Length; i++)
+        {
+            Console.Write(input4[i]);
+            Thread.Sleep(100); // delay between characters
+        }
+        Console.WriteLine();
+        Console.ReadKey();
         Console.Clear();
     }
 
@@ -150,7 +188,90 @@ internal class MenuSystem
 
     private static void Task3()
     {
-        Console.WriteLine("Task 3 selected.");
-        Console.WriteLine("this is task 4");
+        {
+            Console.Clear();
+            // Prompt the user to enter the number of values
+            Col.White("");
+            Console.Write("Enter the amount of speeds you want to sort: ");
+
+            // Read the user's input as a string
+            string input = Console.ReadLine();
+
+            // Initialize a variable to store the number of values
+            int n;
+
+            // Loop until the user enters a valid integer
+            while (!int.TryParse(input, out n))
+            {
+                // Display an error message and prompt the user to try again
+                Col.Red("");
+                Console.WriteLine("Invalid input. Please enter a number.");
+                Col.White("");
+                Console.Write("Please enter the values now: ");
+                input = Console.ReadLine();
+            }
+
+            // Initialize an array of size n
+            int[] arr = new int[n];
+            Console.WriteLine();
+            Console.WriteLine();
+            // Prompt the user to enter the values
+            Console.WriteLine("Enter the values:");
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write("Value {0}: ", i + 1);
+
+                // Read the user's input as a string
+                input = Console.ReadLine();
+
+                // Loop until the user enters a valid integer
+                while (!int.TryParse(input, out arr[i]))
+                {
+                    // Display an error message and prompt the user to try again
+                    Console.WriteLine("Invalid input. Please enter a number.");
+                    Console.Write("Value {0}: ", i + 1);
+                    input = Console.ReadLine();
+                }
+            }
+
+            // Create an instance of the SpeedSort class
+            SpeedSort speedSort = new SpeedSort();
+
+            // Call the speed method to sort the array
+            int[] sortedArr = speedSort.speed(arr);
+
+            // Print the sorted array with "ms" appended to each value
+            Console.Clear();
+            Col.White("");
+            Console.WriteLine("---------------------------------------------------");
+            Console.WriteLine("Sorted values:");
+            Col.Red("");
+            for (int i = 0; i < sortedArr.Length; i++)
+            {
+                Console.Write(sortedArr[i]);
+                Console.WriteLine("ms");
+            }
+            Col.White("");
+            Console.WriteLine("---------------------------------------------------");
+            Helper.Blinker("");
+            Col.Green("");
+            Console.WriteLine("Press any key to return to menu.");
+            Console.ReadKey();
+            Thread.Sleep(1000);
+
+            string input3 = "Go on... hit it again, you know you want to.";
+            for (int i = 0; i < input3.Length; i++)
+            {
+                Console.Write(input3[i]);
+                Thread.Sleep(100); // delay between characters
+            }
+            Console.ReadKey();
+            Console.Clear();
+        }
+    }
+
+    private static void Secret()
+    {
+        Easter.Egg();
     }
 }

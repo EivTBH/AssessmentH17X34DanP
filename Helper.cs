@@ -15,6 +15,8 @@
         int top = Console.CursorTop; // Gets the current vertical position of the console cursor
 
         Console.SetCursorPosition(left, top); // Sets the horizontal position of the console cursor to the calculated left position
+
+
         Col.Blue("");
         Console.WriteLine(text);
         Col.Default("");
