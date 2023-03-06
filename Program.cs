@@ -21,17 +21,17 @@ internal class MenuSystem
 {
     private static void Main()
     {
-        //Hack.Run();
+        // Hack.Run();
 
-        //Pi.Run();
+        // Pi.Run();
         while (true)
         {
-            Helper.CenterText($"Hello and welcome to my 'H17X34' assessment");
+            Helper.CenterText("Hello and welcome to my 'H17X34' assessment");
             Col.White("");
-            string input2 = "Please select a Task:";
-            for (int i = 0; i < input2.Length; i++)
+            string inputMessage = "Please select a Task:";
+            for (int i = 0; i < inputMessage.Length; i++)
             {
-                Console.Write(input2[i]);
+                Console.Write(inputMessage[i]);
                 System.Threading.Thread.Sleep(50); // delay between characters
             }
             Thread.Sleep(200);
@@ -48,10 +48,10 @@ internal class MenuSystem
             Col.Default("");
 
             // Read user input
-            string input = Console.ReadLine();
+            string userInput = Console.ReadLine();
 
             // Determine which method to call based on user input
-            switch (input)
+            switch (userInput)
             {
                 case "1":
                     Task1();
@@ -64,8 +64,6 @@ internal class MenuSystem
                 case "3":
                     Task3();
                     break;
-
-                
 
                 case "4":
                     // Exit the program
@@ -84,7 +82,9 @@ internal class MenuSystem
             }
         }
     }
-
+    // Task 1 Display the total sizes in KB of all of the images and the average size in KB.
+    // Also counts and displays the total number of images there are on the USB
+    // device which are less than 100KB.
     private static void Task1()
     {
         //Assigns numbers to an array
@@ -104,11 +104,6 @@ internal class MenuSystem
             64
         };
         ImageAnalyzer analyzer = new ImageAnalyzer(imageSizes); //shortens ImageAnylyzer name
-
-        // Task 1 Display the total sizes in KB of all of the images and the average size in KB.
-        // Also counts and displays the total number of images there are on the USB
-        // device which are less than 100KB.
-
         Console.Clear();
         Col.White("");
         Console.WriteLine("---------------------------------------");
@@ -116,6 +111,8 @@ internal class MenuSystem
         Console.WriteLine();
         Col.Red("");
         Console.WriteLine("Task 1:");
+        Console.WriteLine();
+        Console.WriteLine("USB:");
         Col.White("");
         Console.WriteLine($"Total size of all images: {analyzer.TotalSize()} KB"); // Prints TotalSize from ImageAnalyzer
         Console.WriteLine($"Average size of all images: {analyzer.AverageSize()} KB"); // Prints Average Size from ImageAnalyzer
