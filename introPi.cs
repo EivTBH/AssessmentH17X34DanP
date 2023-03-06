@@ -1,5 +1,7 @@
 ﻿using System;
-
+/// <summary>
+/// Emulates the boot sequence of a Raspberry Pi.
+/// </summary>
 public class Pi
 {
     public static void Run()
@@ -67,7 +69,7 @@ public class Pi
         Console.Write("done.\n");
 
         Console.ResetColor();
-        // Emulate typing
+       
         Console.WriteLine();
         Console.WriteLine();
         Console.WriteLine();
@@ -75,7 +77,7 @@ public class Pi
         for (int i = 0; i < input2.Length; i++)
         {
             Console.Write(input2[i]);
-            Thread.Sleep(100); // delay between characters
+            Thread.Sleep(100); 
         }
         Thread.Sleep(700);
         Console.Clear();

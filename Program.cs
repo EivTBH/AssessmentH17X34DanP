@@ -21,9 +21,12 @@ internal class MenuSystem
 {
     private static void Main()
     {
-        // Hack.Run();
-
+        // Hack1.Run();
+        // Hack2.Run();
         // Pi.Run();
+        // MSdos.Run
+       
+
         while (true)
         {
             Helper.CenterText("Hello and welcome to my 'H17X34' assessment");
@@ -32,19 +35,22 @@ internal class MenuSystem
             for (int i = 0; i < inputMessage.Length; i++)
             {
                 Console.Write(inputMessage[i]);
-                System.Threading.Thread.Sleep(50); // delay between characters
+                System.Threading.Thread.Sleep(25); // delay between characters
             }
             Thread.Sleep(200);
 
             Console.WriteLine("");
             Col.Red("");
-            Console.WriteLine("1. Task 1 & 2: File size information.");
+            Console.WriteLine("A. Task 1 & 2: File size information.");
+            Thread.Sleep(200);
             Col.Cyan("");
-            Console.WriteLine("2. Task 3: Create email address.");
+            Console.WriteLine("B. Task 3: Create email address.");
+            Thread.Sleep(200);
             Col.Green("");
-            Console.WriteLine("3. Task 4: Enter and Sort Speed from fastest to slowest in (ms).");
+            Console.WriteLine("C. Task 4: Enter and Sort Speed from fastest to slowest in (ms).");
+            Thread.Sleep(200);
             Col.Yellow("");
-            Console.WriteLine("4. Exit");
+            Console.WriteLine("D. Exit");
             Col.Default("");
 
             // Read user input
@@ -53,22 +59,26 @@ internal class MenuSystem
             // Determine which method to call based on user input
             switch (userInput)
             {
-                case "1":
+                case "A": //dual case... just in case.
+                case "a":
                     Task1();
                     break;
 
-                case "2":
+                case "B":
+                case "b":
                     Task2();
                     break;
 
-                case "3":
+                case "C":
+                case "c":
                     Task3();
                     break;
 
-                case "4":
+                case "D":
+                case "d":
                     // Exit the program
                     return;
-
+                
                 case "Easter":
                     Secret();
                     break;
@@ -134,28 +144,6 @@ internal class MenuSystem
         Col.Green("");
         Console.WriteLine("Press any key to return to menu.");
         Console.ReadKey();
-        ConsoleKeyInfo keyInfo = Console.ReadKey();
-
-        Console.Clear();
-        Console.WriteLine($"you pressed the {keyInfo.Key} key!");
-        string input3 = "$I said the 'ANY' key. Its next to the thingy on the wotsit.";
-        for (int i = 0; i < input3.Length; i++)
-        {
-            Console.Write(input3[i]);
-            Thread.Sleep(100); // delay between characters
-        }
-        Console.WriteLine();
-        Console.ReadKey();
-        Console.Clear();
-        Console.WriteLine($"you pressed the {keyInfo.Key} key this time!");
-        string input4 = "Oh fine, don't listen to me! Press whatever you want!";
-        for (int i = 0; i < input4.Length; i++)
-        {
-            Console.Write(input4[i]);
-            Thread.Sleep(100); // delay between characters
-        }
-        Console.WriteLine();
-        Console.ReadKey();
         Console.Clear();
     }
 
@@ -167,7 +155,8 @@ internal class MenuSystem
     {
         Console.Clear();
         Col.Cyan("");
-        Console.WriteLine("Welcome to the email creation system. Please enter your name.");
+        Console.WriteLine("Welcome to the email creation system.");
+        Col.White("");
         Console.WriteLine();
 
         // Create an instance of the EmailShort class and call the Email method
@@ -175,7 +164,15 @@ internal class MenuSystem
         string userName = emailShort.Email();
 
         // Use the returned user name as needed
+        Col.Red("");
+        Console.WriteLine("---------------------------------------------------");
+        Col.White("");
         Console.WriteLine($"The email is: {userName}");
+        Col.Red("");
+        Console.WriteLine("---------------------------------------------------");
+        Col.White("");
+
+        //The Helper.Blinker method is called to give a blinking effect, indicating that the computer is 'thinking' and not crashed. Then the user is prompted to press any key to return to the menu.
         Helper.Blinker("");
         Col.Green("");
         Console.WriteLine("Press any key to return to menu.");
@@ -189,7 +186,7 @@ internal class MenuSystem
             Console.Clear();
             // Prompt the user to enter the number of values
             Col.White("");
-            Console.Write("Enter the amount of speeds you want to sort: ");
+            Console.Write("Enter the amount of values you want to sort: ");
 
             // Read the user's input as a string
             string input = Console.ReadLine();

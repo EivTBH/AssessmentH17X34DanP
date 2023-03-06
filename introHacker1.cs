@@ -1,6 +1,10 @@
-﻿using System;
+﻿/// <summary>
+/// Emulates a hacking screen from a movie.
+/// </summary>
 
-public class Terminal
+using System;
+
+public class Hack1
 {
     public static void Run()
     {

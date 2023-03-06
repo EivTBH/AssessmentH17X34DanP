@@ -12,7 +12,13 @@
         do
         {
             // Prompt the user to enter their full name
-            Console.Write("Please enter your First and Last name separated by a space: ");
+            string input3 = "Please enter your First and Last name separated by a space:";
+            for (int i = 0; i < input3.Length; i++)
+            {
+                Console.Write(input3[i]);
+                Thread.Sleep(20); // delay between characters
+            }
+            
             Col.White("");
             fullName = Console.ReadLine();
         } while (!IsValidName(fullName));
@@ -34,7 +40,9 @@
         // If the name doesn't consist of exactly two words, print an error message and return false
         if (names.Length != 2)
         {
+            Col.Red("");
             Console.WriteLine("Error: please enter a valid name with first name and surname separated by a space.");
+            Col.White("");
             return false;
         }
 
@@ -43,7 +51,9 @@
         string lastName = names[1];
         if (!IsAllLetters(firstName) || !IsAllLetters(lastName))
         {
+            Col.Red("");
             Console.WriteLine("Error: please enter a valid name without numbers or special characters.");
+            Col.White("");
             return false;
         }
 

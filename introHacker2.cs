@@ -1,4 +1,7 @@
-﻿public class Hack
+﻿/// <summary>
+/// Emulates a hacking screen from a movie, now with more nonsense.
+/// </summary>
+public class Hack2
 {
     public static void Run()
     {

@@ -5,7 +5,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
-// Asigns a text colour in a shorted form for ease of use.
+// Assigns a text colour in a shortened form for ease of use.
 public static class Col
 {
     public static void Red(string args)
