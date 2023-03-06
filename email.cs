@@ -82,4 +82,11 @@
         string lastName = names[1];
 
         // Capitalize the first letter of each word
-        firstName = char.ToUpper(firstName[0]) + firstName.Substring(1
+        firstName = char.ToUpper(firstName[0]) + firstName.Substring(1).ToLower();
+        lastName = char.ToUpper(lastName[0]) + lastName.Substring(1).ToLower();
+
+        string userName = $"{firstName}.{lastName}".Trim() + "@dundeeandangus.ac.uk";
+
+        return userName;
+    }
+}

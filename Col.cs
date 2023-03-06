@@ -47,4 +47,39 @@ public static class Col
     {
         Console.ForegroundColor = ConsoleColor.Gray;
     }
+
+    public static void Black(string args)
+    {
+        Console.ForegroundColor = ConsoleColor.Black;
+    }
+
+    public static void DarkBlue(string args)
+    {
+        Console.ForegroundColor = ConsoleColor.DarkBlue;
+    }
+    public static void DarkGreen(string args)
+    {
+        Console.ForegroundColor = ConsoleColor.DarkGreen;
+    }
+    public static void DarkCyan(string args)
+    {
+        Console.ForegroundColor = ConsoleColor.DarkCyan;
+    }
+    public static void DarkRed(string args)
+    {
+        Console.ForegroundColor = ConsoleColor.DarkRed;
+    }
+    public static void DarkMagenta(string args)
+    {
+        Console.ForegroundColor = ConsoleColor.DarkMagenta;
+    }
+    public static void DarkYellow(string args)
+    {
+        Console.ForegroundColor = ConsoleColor.DarkYellow;
+    }
+    public static void DarkGray(string args)
+    {
+        Console.ForegroundColor = ConsoleColor.DarkGray;
+    }
+
 }
