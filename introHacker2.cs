@@ -68,7 +68,9 @@ public class Hack2
                     {
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.SetCursorPosition(k, Console.CursorTop);
-                        Console.Write("--VIRUS--VIRUS--VIRUS--VIRUS--VIRUS--VIRUS--VIRUS--VIRUS--VIRUS--VIRUS--VIRUS--VIRUS--VIRUS--VIRUS--VIRUS--VIRUS--VIRUS--");
+                        Console.Write(
+                            "--VIRUS--VIRUS--VIRUS--VIRUS--VIRUS--VIRUS--VIRUS--VIRUS--VIRUS--VIRUS--VIRUS--VIRUS--VIRUS--VIRUS--VIRUS--VIRUS--VIRUS--"
+                        );
                         System.Threading.Thread.Sleep(10);
                         Console.ForegroundColor = ConsoleColor.Green;
                         Console.WriteLine();

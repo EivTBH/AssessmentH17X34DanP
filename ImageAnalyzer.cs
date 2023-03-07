@@ -1,8 +1,4 @@
-﻿using static System.Net.Mime.MediaTypeNames;
-using System.Diagnostics.Metrics;
-using System.Drawing;
-
-namespace Assessment
+﻿namespace Assessment
 {
     /// <summary>
     /// Task 1 — Display the total size in KB of all of the images and the average size in KB of all of the images.

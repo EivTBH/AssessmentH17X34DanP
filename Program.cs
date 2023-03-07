@@ -25,13 +25,12 @@ internal class MenuSystem
         // Hack2.Run();
         // Pi.Run();
         // MSdos.Run
-       
 
         while (true)
         {
             Helper.CenterText("Hello and welcome to my 'H17X34' assessment");
             Col.White("");
-            string inputMessage = "Please select a Task:";
+            string inputMessage = "Please Select a Task:";
             for (int i = 0; i < inputMessage.Length; i++)
             {
                 Console.Write(inputMessage[i]);
@@ -41,13 +40,13 @@ internal class MenuSystem
 
             Console.WriteLine("");
             Col.Red("");
-            Console.WriteLine("A. Task 1 & 2: File size information.");
+            Console.WriteLine("A. Task 1 & 2: File Size Information.");
             Thread.Sleep(200);
             Col.Cyan("");
-            Console.WriteLine("B. Task 3: Create email address.");
+            Console.WriteLine("B. Task 3: Create Email Address.");
             Thread.Sleep(200);
             Col.Green("");
-            Console.WriteLine("C. Task 4: Enter and Sort Speed from fastest to slowest in (ms).");
+            Console.WriteLine("C. Task 4: Enter and Sort Speed from Fastest to Slowest in (ms).");
             Thread.Sleep(200);
             Col.Yellow("");
             Console.WriteLine("D. Exit");
@@ -78,7 +77,7 @@ internal class MenuSystem
                 case "d":
                     // Exit the program
                     return;
-                
+
                 case "Easter":
                     Secret();
                     break;
@@ -92,6 +91,7 @@ internal class MenuSystem
             }
         }
     }
+
     // Task 1 Display the total sizes in KB of all of the images and the average size in KB.
     // Also counts and displays the total number of images there are on the USB
     // device which are less than 100KB.

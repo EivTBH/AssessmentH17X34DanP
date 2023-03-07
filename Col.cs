@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
-
-// Assigns a text colour in a shortened form for ease of use.
+﻿/// <summary>
+/// Assigns a text colour in a shortened form for ease of use.
+/// </summary>
 public static class Col
 {
     public static void Red(string args)
@@ -57,29 +52,34 @@ public static class Col
     {
         Console.ForegroundColor = ConsoleColor.DarkBlue;
     }
+
     public static void DarkGreen(string args)
     {
         Console.ForegroundColor = ConsoleColor.DarkGreen;
     }
+
     public static void DarkCyan(string args)
     {
         Console.ForegroundColor = ConsoleColor.DarkCyan;
     }
+
     public static void DarkRed(string args)
     {
         Console.ForegroundColor = ConsoleColor.DarkRed;
     }
+
     public static void DarkMagenta(string args)
     {
         Console.ForegroundColor = ConsoleColor.DarkMagenta;
     }
+
     public static void DarkYellow(string args)
     {
         Console.ForegroundColor = ConsoleColor.DarkYellow;
     }
+
     public static void DarkGray(string args)
     {
         Console.ForegroundColor = ConsoleColor.DarkGray;
     }
-
 }

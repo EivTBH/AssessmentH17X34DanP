@@ -1,5 +1,3 @@
-using System;
-
 public class MSdos
 {
     public static void Run()
@@ -14,12 +12,13 @@ public class MSdos
             System.Threading.Thread.Sleep(600);
         }
         Console.Clear();
-        Console.ForegroundColor = ConsoleColor.Green; 
+        Console.ForegroundColor = ConsoleColor.Green;
         Console.BackgroundColor = ConsoleColor.Black;
         Console.WriteLine("Microsoft(R) MS-DOS(R) Version 6.22");
         Console.WriteLine("(C) Copyright Microsoft Corp 1981");
         Console.WriteLine("");
-        Console.ForegroundColor = ConsoleColor.Green; ;
+        Console.ForegroundColor = ConsoleColor.Green;
+        ;
         Console.BackgroundColor = ConsoleColor.Black;
         Thread.Sleep(500);
         Console.Write("C:\\>");
@@ -38,8 +37,7 @@ public class MSdos
         Console.ForegroundColor = ConsoleColor.Green;
         Console.Write("C:\\>");
         Thread.Sleep(2000);
-        
-        
+
         // Emulate typing
         string input2 = "H17X34";
         for (int i = 0; i < input2.Length; i++)
@@ -61,9 +59,6 @@ public class MSdos
         Thread.Sleep(700);
         Console.Clear();
 
-
         Console.Clear();
-
-
     }
 }

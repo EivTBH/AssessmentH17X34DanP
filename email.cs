@@ -18,7 +18,7 @@
                 Console.Write(input3[i]);
                 Thread.Sleep(20); // delay between characters
             }
-            
+
             Col.White("");
             fullName = Console.ReadLine();
         } while (!IsValidName(fullName));
@@ -41,7 +41,9 @@
         if (names.Length != 2)
         {
             Col.Red("");
-            Console.WriteLine("Error: please enter a valid name with first name and surname separated by a space.");
+            Console.WriteLine(
+                "Error: please enter a valid name with first name and surname separated by a space."
+            );
             Col.White("");
             return false;
         }
@@ -52,7 +54,9 @@
         if (!IsAllLetters(firstName) || !IsAllLetters(lastName))
         {
             Col.Red("");
-            Console.WriteLine("Error: please enter a valid name without numbers or special characters.");
+            Console.WriteLine(
+                "Error: please enter a valid name without numbers or special characters."
+            );
             Col.White("");
             return false;
         }

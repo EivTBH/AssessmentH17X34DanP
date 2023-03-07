@@ -16,7 +16,6 @@
 
         Console.SetCursorPosition(left, top); // Sets the horizontal position of the console cursor to the calculated left position
 
-
         Col.Blue("");
         Console.WriteLine(text);
         Col.Default("");
